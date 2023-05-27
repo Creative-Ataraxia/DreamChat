@@ -47,7 +47,7 @@ if submit_button:
         st.session_state.chat_history += f"您梦到了: {user_input}\n\n{gpt_response}\n\n\n"
         st.write(gpt_response)
 
-st.text_area("解梦记录", st.session_state.chat_history, height=350, max_chars=None, key='chat_history', disabled=True)
+st.text_area("解梦记录", st.session_state.chat_history, disabled=True, height=350, max_chars=None, key='chat_history')
 
 st.text("")
 

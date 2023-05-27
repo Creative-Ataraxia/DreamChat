@@ -38,7 +38,7 @@ if submit_button:
         prompt = engineer_followup_prompt(user_input)
 
     # Use a spinner while fetching response from GPT-3 API
-    with st.spinner('Generating response...'):
+    with st.spinner('接收信号中...请耐心等待...'):
         gpt_response = generate_gpt_response(prompt, max_tokens=300)
 
     if gpt_response is None:

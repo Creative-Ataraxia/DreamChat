@@ -14,8 +14,7 @@ def generate_gpt_response(gpt_input, max_tokens):
     """
 
     # Set your OpenAI API Key; streamlit's doc: https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app/connect-to-data-sources/secrets-management
-    openai.api_key = st.secrets["openai_credentials"]["API_KEY"]
-    # openai.api_key = "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"
+    openai.api_key = st.secrets["OPENAI_API_KEY"]
 
     try:
         completion = openai.ChatCompletion.create(

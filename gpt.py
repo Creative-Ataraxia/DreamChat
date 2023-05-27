@@ -28,6 +28,6 @@ def generate_gpt_response(gpt_input, max_tokens):
         gpt_response = completion.choices[0].message['content'].strip()
         return f"梦神说: {gpt_response}"
 
-    except Exception as e:
+    except openai.api_errors.OpenAIError as e:
         print(f"Error fetching response from API: {e}")
-        return f"服务器开小差了，请稍后再试.\n报错:{e}"
+        return f"服务器开小差了，请稍后再试.\n报错: {e}"

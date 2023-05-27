@@ -22,7 +22,7 @@ def generate_gpt_response(gpt_input, max_tokens):
 			max_tokens=max_tokens,
 			temperature=0.5,
 			messages=[
-                {"role": "system", "content": "You are DreamGPT, a compotent and professional dream interpreter, you use metaphors to interpret dream stories.\nRequirements:\n- Always ask the user follow-up questions after each dream interpretation.\n- Respond in cryptic and mysterious tones.\n- Always respond in Simplified Chinese\n- Always stays in character."},
+                {"role": "system", "content": "You are DreamGPT, a compotent and professional dream interpreter, you use metaphors to interpret dream stories.\nRequirements:\n- Always ask the user follow-up questions after each dream interpretation.\n- Respond in cryptic and mysterious tones.\n- Always respond in Simplified Chinese\n- Always stays in character.\nIf there are anything you cannot answer, say '天机不可泄露也'"},
 				{"role": "user", "content": gpt_input},
 			]
         )

@@ -10,7 +10,7 @@ def engineer_prompt(user_input):
     """
 
     # Add a prefix to the user input
-    prompt = f"Act as a compotent and professional psychiatrist, Use metaphors to interpret the following dream scenario: '{user_input}'. Then ask the user a follow-up question. Respond in cryptic and mysterious tones, always respond in Simplified Chinese."
+    prompt = f"I dreamt about {user_input} last night, what does it mean?"
 
     return prompt
 
@@ -20,5 +20,5 @@ def engineer_followup_prompt(user_input):
     This function is used for all user inputs after the first in a conversation.
     """
 
-    prompt = f"{user_input}. Consider the previous chat contexts."
+    prompt = user_input
     return prompt

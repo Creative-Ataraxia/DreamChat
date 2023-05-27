@@ -28,7 +28,17 @@ def generate_gpt_response(gpt_input, max_tokens):
         gpt_response = completion.choices[0].message['content'].strip()
         return f"梦神说: {gpt_response}"
     
-    except openai.error as e:
-    #Handle error here
-        print(f"OpenAI API returned an Error: {e}")
+    except openai.error.APIError as e:
+    #Handle API error here, e.g. retry or log
+        print(f"OpenAI API returned an API Error: {e}")
+        return f"服务器开小差了，请稍后再试.\n报错: {e}"
+    
+    except openai.error.APIConnectionError as e:
+    #Handle connection error here
+        print(f"Failed to connect to OpenAI API: {e}")
+        return f"服务器开小差了，请稍后再试.\n报错: {e}"
+    
+    except openai.error.RateLimitError as e:
+    #Handle rate limit error (we recommend using exponential backoff)
+        print(f"OpenAI API request exceeded rate limit: {e}")
         return f"服务器开小差了，请稍后再试.\n报错: {e}"

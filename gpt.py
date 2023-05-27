@@ -30,4 +30,4 @@ def generate_gpt_response(gpt_input, max_tokens):
 
     except Exception as e:
         print(f"Error fetching response from API: {e}")
-        return "服务器开小差了，请稍后再试."
+        return f"服务器开小差了，请稍后再试.\n报错:{e}"

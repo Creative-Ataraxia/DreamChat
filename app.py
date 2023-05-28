@@ -60,9 +60,10 @@ with st.sidebar:
     st.write('Made with ❤️ by [Creative_Ataraxia](<https://github.com/Creative-Ataraxia?tab=repositories>)')
 
 # App general layout
-input_container = st.container()
-colored_header(label='', description='', color_name='blue-30')
 response_container = st.container()
+colored_header(label='', description='', color_name='blue-30')
+add_vertical_space(3)
+input_container = st.container()
 
 # Applying the user input box
 with input_container:

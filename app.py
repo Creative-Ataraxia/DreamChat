@@ -18,7 +18,7 @@ from gpt import generate_gpt_response
 
 ## Function for taking user provided prompt as input
 def get_text():
-    input_text = st.text_input("您梦到了: ", "", key="input")
+    input_text = st.text_input("请输入: ", "", help="请简单描述您的梦境", key="input")
     return input_text
 
 

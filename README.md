@@ -1,4 +1,4 @@
-# A streamlit App to talk about the dreams you had last night
+# Chat about your luck today!
 
 ## [Hosted App](https://creative-ataraxia-dreamchat-app-004aqh.streamlit.app)
 
